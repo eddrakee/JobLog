@@ -2,4 +2,4 @@ console.log('hello i hope this works! -- Matt')
 
 console.log('hey this is from the MattPedersen1 branch.')
 
-console.log('Hey all, This is King.');
+console.log('Hi all, This is King.');
