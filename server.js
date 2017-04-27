@@ -1,17 +1,14 @@
-console.log('hello i hope this works! -- Matt')
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser')
+var path = require('path')
+var port = 8000
 
-console.log('hey this is from the MattPedersen1 branch.')
-
-console.log('King.');
-
-console.log('this is from the branch MattPedersen2, trying branching using github!')
-
-console.log('Seth');
-
-console.log('yo yo yo its elise yoooo')
+app.use(express.static(path.join(__dirname,'/client')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use(bodyParser.json())
 
 
-
-
-
-console.log('MICHAEL SADHIAOROJASADFAFs')
+app.listen(port, function(){
+    console.log(`JOBLOG - listening to ${port}`)
+})
