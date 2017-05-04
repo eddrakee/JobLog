@@ -28,6 +28,11 @@ app.config(function($routeProvider){
   .when('/company/add', {
     templateUrl: 'partials/addCompany.html'
   })
+  .when('/company/add', {
+    templateUrl: 'partials/addCompany.html',
+    controller: 'companyController',
+    controllerAs: 'CC'
+  })
   .otherwise({
     redirectTo: '/'
   })

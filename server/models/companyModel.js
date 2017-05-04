@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const CompanySchema = new Schema({
 companyName: {type: String, required: true},
 location: {type: String},
+phone: {type: String},
 about: {type: String},
 linkedInConnection: {type: String},
 jobsApplied: [{type: mongoose.Schema.Types.ObjectId, ref: "Job"}],
