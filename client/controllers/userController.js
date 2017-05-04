@@ -1,3 +1,5 @@
+console.log('userController');
+
 app.controller('userController', function($scope, $location, $http, userFactory){
   $scope.registeredUser = {};
   $scope.error = {};
@@ -7,10 +9,10 @@ app.controller('userController', function($scope, $location, $http, userFactory)
       $location.url('/dashboard');
     }
   });
-  $scope.createUser = function(input){
-    console.log('make this new user', input);
+  $scope.createUser = function(newUser){
+    console.log('make this new user', newUser);
     //call factory
-    userFactory.createUser(input, function(response){
+    userFactory.createUser(newUser, function(response){
       console.log(response);
     })
     $scope.newUser = {};
