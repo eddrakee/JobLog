@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html lang="en">
 <head>
-	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="./controllers/userController.js"></script>
+    <script src="./factories/userFactory.js"></script>
 </head>
-<body>
-	<div ng-include="'addJob.html'"></div>
+<body ng-app='app'>
+    <div ng-view></div>
 </body>
 </html>
