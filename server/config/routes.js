@@ -20,6 +20,7 @@ module.exports = function(app){
 
   } // end of module.exports
 
+// Do we want to keep this here? - ED
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
       return next();
@@ -27,4 +28,4 @@ module.exports = function(app){
       res.redirect('/')
     }
   }
-}
+

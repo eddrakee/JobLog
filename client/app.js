@@ -25,6 +25,9 @@ app.config(function($routeProvider){
   .when('/jobs/all', {
     templateUrl: 'partials/allJobs.html'
   })
+  .when('/company/add', {
+    templateUrl: 'partials/addCompany.html'
+  })
   .otherwise({
     redirectTo: '/'
   })
