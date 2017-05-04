@@ -1,25 +1,20 @@
-var express      = require('express');
-var app          = express();
-var bodyParser   = require('body-parser');
-var mongoose     = require('mongoose');
-var passport     = require('passport');
-var session      = require('express-session');
-var flash        = require('connect-flash');
-var morgan       = require('morgan');
-var cookieParser = require('cookie-parser');
-var path         = require('path');
-var port         = 8000;
+console.log('hello i hope this works! -- Matt')
 
-// PASSPORT
-// require('./server/config/passport.js')(passport);
+console.log('hey this is from the MattPedersen1 branch.')
 
-app.use(express.static(path.join(__dirname,'/client')));
-app.use(express.static(path.join(__dirname, 'node_modules')));
-app.use(bodyParser.json());
-app.use(session({ secret: 'Joblog secret', name: 'Joblog' }));
-app.use(passport.initialize());
-app.use(passport.session());
+console.log('this is from the branch MattPedersen2, trying branching using github!')
 
-app.listen(port, function(){
-    console.log(`JOBLOG - listening to ${port}`)
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('yo yo yo its elise yoooo')
