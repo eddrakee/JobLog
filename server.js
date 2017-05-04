@@ -18,7 +18,9 @@ var port         = 8000;
 app.use(express.static(path.join(__dirname,'/client')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(bodyParser.json());
-app.use(session({ secret: 'Joblog secret', name: 'Joblog' }));
+app.use(session({ secret: process.env.SESSION_SECRET || 'joblog',
+                          resave: false,
+                          saveUninitialized: false}));
 app.use(passport.initialize());
 app.use(passport.session());
 

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var User = mongoose.model('User');
+var User = mongoose.model('userModel');
 var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
 module.exports = (function(){
