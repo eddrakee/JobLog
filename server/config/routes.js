@@ -26,7 +26,8 @@ module.exports = function(app){
   app.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile');
   });
-
+  
+// Do we want to keep this here? - ED
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
       return next();
