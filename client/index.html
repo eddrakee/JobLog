@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- App Setup -->
+
+    <title>JOBLOG</title>
+    <!--  App Setup  -->
     <script src="angular/angular.js"></script>
     <script src="angular-route/angular-route.js"></script>
-    <script src="angular-cookies/angular-cookies.js">
-
-    </script>
+    <script src="angular-cookies/angular-cookies.js"></script>
     <script src="app.js"></script>
     <!-- Factories -->
     <script src="./factories/userFactory.js"></script>
@@ -18,7 +18,11 @@
     <!-- Controllers -->
     <script src="./controllers/userController.js"></script>
     <script src="./controllers/companyController.js"></script>
+
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link href="/static/css/stylesheet.css" rel="stylesheet">
 </head>
+
 <body ng-app='app'>
     <div ng-view></div>
 </body>

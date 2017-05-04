@@ -20,6 +20,7 @@ module.exports = function(app){
     app.post('/company/add', company.post);
   } // end of module.exports
 
+// Do we want to keep this here? - ED
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
       return next();

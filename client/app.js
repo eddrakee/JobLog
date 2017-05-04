@@ -5,25 +5,35 @@
 
 var app = angular.module('app',['ngRoute'])
 app.config(function($routeProvider){
-    $routeProvider
-     //ADD ROUTES HERE
-    .when('/', {
-        templateUrl: 'partials/dashboard.html'
-    })
-    // Load Profile Page
-    .when('/profile', {
-        templateUrl: 'partials/profile.html'
-    })
-    // Load View All Jobs page
-    .when('/jobs/all', {
-        templateUrl: 'partials/allJobs.html'
-    })
-    .when('/company/add', {
-      templateUrl: 'partials/addCompany.html',
-      controller: 'companyController',
-      controllerAs: 'CC'
-    })
-    .otherwise({
-        redirectTo: '/'
-    })
+  $routeProvider
+   //ADD ROUTES HERE
+
+  .when('/', {
+    templateUrl: 'partials/dashboard.html'
+  })
+  .when('/login', {
+    templateUrl: 'partials/login.html'
+  })
+  .when('/signup', {
+    templateUrl: 'partials/signup.html'
+  })
+  // Load Profile Page
+  .when('/profile', {
+    templateUrl: 'partials/profile.html'
+  })
+  // Load View All Jobs page
+  .when('/jobs/all', {
+    templateUrl: 'partials/allJobs.html'
+  })
+  .when('/company/add', {
+    templateUrl: 'partials/addCompany.html'
+  })
+  .when('/company/add', {
+    templateUrl: 'partials/addCompany.html',
+    controller: 'companyController',
+    controllerAs: 'CC'
+  })
+  .otherwise({
+    redirectTo: '/'
+  })
 })

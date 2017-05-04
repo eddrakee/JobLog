@@ -1,12 +1,13 @@
 <div ng-controller='userController'>
-    <div class="profile-top">
-        <h1>LOG IN</h1>
-        <div class="profile-left">
-            <p>Email: </p>
-            <p>Password: </p>
-        </div>
-        <div class="profile-right">
-            <img src="" alt="">
-        </div>
-    </div>
+  <h3>Login</h3>
+  <form ng-submit='loginUser(userData)'>
+    <div ng-if='error.message'><span ng-bind='error.message'></span></div>
+    <input type="text" name='email' placeholder="Enter Email" ng-model='userData.email'>
+    <input type="password" name='password' placeholder="Enter Password" ng-model='userData.password'>
+    <input type="submit" value="Submit">
+    <a href="#!/signup">Signup</a>
+  </form>
+  Log In with
+  <a href="/auth/linkedin">Linkedin</a>
+  <a href="/auth/github">Github</a>
 </div>

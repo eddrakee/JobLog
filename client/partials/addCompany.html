@@ -1,29 +1,86 @@
-<div id="mainContainer" style="text-align: center; margin: 50px 50px 50px 50px; font-family: Arial, sans-serif">
-    <div id="bodyHead">
-        <h1>ADD COMPANY</h1>
-    </div>
-    <div id="navBar">
-        <ul style="list-style-type: none; margin: 0; padding: 0; width: 100%; background-color: lightgrey">
-            <li style="display: inline; padding: 0px 15px 0px 15px;"><a href="dashboardApp.html">Dashboard</a></li>
-            <li style="display: inline; padding: 0px 15px 0px 15px;"><a href="allJobs.html">All Jobs</a></li>
-            <li style="display: inline; padding: 0px 15px 0px 15px;"><a href="#">Add Job</a></li>
-            <li style="display: inline; padding: 0px 15px 0px 15px;"><a href="#">Calendar</a></li>
-            <li style="display: inline; padding: 0px 15px 0px 15px;"><a href="#">Logout</a></li>
-        </ul>
-    </div>
-    <div id="bodyMid" style="margin: 0px 50px 0px 50px; ">
-        <h2>COMPANY X</h2>
-        <form id="addCompanyInfo">
-            <label for="companyName">Name</label>
-            <input style="width: 200px;" type="text" id="companyName" ng-model="CC.companyName">
-            <br>
-            <label for="companyAdd">Address</label>
-            <input style="width: 200px;" type="text" id="companyAdd" ng-model="CC.companyAdd">
-            <br>
-            <label for="companyPhone">Phone</label>
-            <input style="width: 200px;" type="text" id="companyPhone" ng-model="CC.companyPhone">
-            <br>
-            <input type="submit" name="" value="Submit!" ng-click="CC.submit()">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Company</title>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">JobLog</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Dashboard</a></li>
+                <li><a href="#">Add Job</a></li>
+                <li><a href="#">Add Company</a></li>
+                <li><a href="#">Add Contact</a></li>
+                 <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <h1>Add a Company</h1>
+        <p>This is where you add in stuff about the company</p>
+        <form ng-submit="addCompany">
+            <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input type="text" class="form-control" id="companyName" aria-describedby="companyName" placeholder="Enter company name">
+            </div>
+            <div class="form-group">
+                <label for="location">Company Address</label>
+                <input type="text" class="form-control" id="location" aria-describedby="location" placeholder="Enter company location">
+            </div>
+            <div class="form-group">
+                <label for="phone">Company Phone</label>
+                <input type="text" class="form-control" data-format="+1 (ddd) ddd-dddd" id="phone" aria-describedby="phone" placeholder="Enter Phone (xxx) xxx-xxxx">
+            </div>
+            <div class="form-group">
+                <label for="about">About</label>
+                <textarea class="form-control" id="about" rows="3" placeholder="Enter notes about the company"></textarea>
+
+            </div>
+            <p>Linkedin Contact...</p>
+            <p>Related jobs previously applied...</p>
+            <p>Contacts at the company...</p>
+
+            <button type="submit" class="btn">ADD</button>
         </form>
     </div>
+</body>
+
+</html>
+<!--
+<div id="mainContainer" style="text-align: center; margin: 50px 50px 50px 50px; font-family: Arial, sans-serif">
+<div id="bodyHead">
+    <h1>ADD COMPANY</h1>
 </div>
+<div id="navBar">
+    <ul style="list-style-type: none; margin: 0; padding: 0; width: 100%; background-color: lightgrey">
+<li style="display: inline; padding: 0px 15px 0px 15px;"><a href="dashboardApp.html">Dashboard</a></li>
+<li style="display: inline; padding: 0px 15px 0px 15px;"><a href="allJobs.html">All Jobs</a></li>
+<li style="display: inline; padding: 0px 15px 0px 15px;"><a href="#">Add Job</a></li>
+<li style="display: inline; padding: 0px 15px 0px 15px;"><a href="#">Calendar</a></li>
+<li style="display: inline; padding: 0px 15px 0px 15px;"><a href="#">Logout</a></li>
+</ul>
+</div>
+<div id="bodyMid" style="margin: 0px 50px 0px 50px; ">
+<h2>COMPANY X</h2>
+<form id="addCompanyInfo">
+    <label for="companyName">Name</label>
+    <input style="width: 200px;" type="text" id="companyName">
+<br>
+<label for="companyAdd">Address</label>
+<input style="width: 200px;" type="text" id="companyAdd">
+<br>
+<label for="companyPhone">Phone</label>
+<input style="width: 200px;" type="text" id="companyPhone">
+<br>
+<input type="submit" name="" value="Submit!">
+</form>
+</div>
+</div>-->
