@@ -26,12 +26,19 @@ app.config(function($routeProvider){
     templateUrl: 'partials/allJobs.html'
   })
   .when('/company/add', {
-    templateUrl: 'partials/addCompany.html'
-  })
-  .when('/company/add', {
     templateUrl: 'partials/addCompany.html',
     controller: 'companyController',
     controllerAs: 'CC'
+  })
+  .when('/company/', {
+      templateUrl: 'partials/company.html',
+      controller: 'viewCompanyController',
+      controllerAs: 'VCC'
+  })
+  .when('/contact/add', {
+      templateUrl: 'partials/addContact.html',
+      controller: 'contactController',
+      controllerAs: 'CC'
   })
   .otherwise({
     redirectTo: '/'

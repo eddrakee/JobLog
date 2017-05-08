@@ -1,5 +1,3 @@
-console.log('userController');
-
 app.controller('userController', function($scope, $location, $http, userFactory){
   $scope.registeredUser = {};
   $scope.error = {};

@@ -1,8 +1,14 @@
-var mongoose = require('mongoose');
-var Contact = mongoose.model('Contact');
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 
-module.exports = (function(){
-  return{
-    //your code
+const Contact = mongoose.model("Contact");
+
+
+function companyController(){
+  var self = this;
+  self.add = function(req, res){
+    console.log(req.body);
   }
-})();
+}
+
+module.exports = new companyController();
