@@ -1,5 +1,3 @@
-console.log('userFactory');
-
 app.factory('userFactory', function($http, $window){
   var user = {};
   var error = {};
