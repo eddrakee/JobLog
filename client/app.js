@@ -25,6 +25,9 @@ app.config(function($routeProvider){
   .when('/jobs/all', {
     templateUrl: 'partials/allJobs.html'
   })
+  .when('/jobs/add', {
+    templateUrl: 'partials/addJob.html'
+  })
   .when('/company/add', {
     templateUrl: 'partials/addCompany.html',
     controller: 'companyController',
