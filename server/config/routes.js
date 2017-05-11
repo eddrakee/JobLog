@@ -27,11 +27,11 @@ module.exports = function(app){
     res.render('profile');
   });
 // Company
-    app.post('/company/add', company.add);
-    app.get('/company/:id', company.getCompany);
+    app.post('/company/add', company.addOne);
+    app.get('/company/:id', company.getOne);
 
 // Contact
-    app.post('/contact/add', contact.add);
+    app.post('/contact/add', contact.addOne);
 
 // Job
 app.post('/jobs/add', function(req,res){
