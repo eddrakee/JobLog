@@ -23,10 +23,14 @@ app.config(function($routeProvider){
   })
   // Load View All Jobs page
   .when('/jobs/all', {
-    templateUrl: 'partials/allJobs.html'
+    templateUrl: 'partials/allJobs.html',
+    controller: 'jobController',
+    controllerAs: 'JC'
   })
   .when('/jobs/add', {
-    templateUrl: 'partials/addJob.html'
+    templateUrl: 'partials/addJob.html',
+    controller: 'jobController',
+    controllerAs: 'JC'
   })
   .when('/company/add', {
     templateUrl: 'partials/addCompany.html',

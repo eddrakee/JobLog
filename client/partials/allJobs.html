@@ -1,15 +1,16 @@
-<div ng-controller='userController'>
-    
-    <table>
-        <thead>
-            <th>Job Name</th>
-            <th>Date Applied</th>
-            <th>Progress</th>
-        </thead>
-        <tbody>
-            <td>Batman's butler</td>
-            <td>Yesterday</td>
-            <td>hired</td>
-        </tbody>
-    </table>
-</div>
+<table class="table table-striped">
+    <thead>
+    <th>Job Name</th>
+    <th>Date Applied</th>
+    <th>Company</th>
+    <th>Progress</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="job in JC.jobList">
+    <td>{{job.position}}</td>
+    <td>{{job.dateApplied}}</td>
+    <td>{{job.company}}</td>
+    <td>{{job.foundThrough}}</td>
+    </tr>
+    </tbody>
+</table>
