@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// We need a reference to the parent user
 const JobSchema = new Schema({
   position: {type: String},
   url: {type: String},
