@@ -6,7 +6,7 @@ const Contact = mongoose.model("Contact");
 
 function companyController(){
   var self = this;
-  self.add = function(req, res){
+  self.addOne = function(req, res){
     console.log(req.body);
   }
 }

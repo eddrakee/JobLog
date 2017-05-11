@@ -1,10 +1,17 @@
-app.factory('jobFactory', function($http){
+angular.module("app").factory("jobFactory", jobFactory);
+
+function jobFactory($http){
     var factory = {};
-    factory.questions = []
-    factory.addJob = function(job){
-        $http.post('/jobs/add',job).then(function(output){
-            factory.questions.push(output.data)
+    factory.addJob = function(job, cb){
+        $http.post('/jobs/add', job).then(function(output){
+          console.log(output);
+            cb(output.data);
         })
     }
+    factory.getJobs = function(cb){
+        $http.get('/jobs/all').then(function(output){
+            cb(output.data);
+        });
+    }
     return factory;
-})
+}
