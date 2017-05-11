@@ -2,8 +2,9 @@ angular.module("app").factory("jobFactory", jobFactory);
 
 function jobFactory($http){
     var factory = {};
-    factory.addJob = function(job,cb){
-        $http.post('/jobs/add',job).then(function(output){
+    factory.addJob = function(job, cb){
+        $http.post('/jobs/add', job).then(function(output){
+          console.log(output);
             cb(output.data);
         })
     }
