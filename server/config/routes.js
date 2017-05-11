@@ -37,6 +37,10 @@ module.exports = function(app){
 app.post('/jobs/add', function(req,res){
   jobs.addJob(req,res)
 })
+//Get All jobs
+app.get('/jobs/all', function(req,res){
+  jobs.allJobs(req,res)
+})
 // Do we want to keep this here? - ED
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
