@@ -1,6 +1,6 @@
-angular.module("app").controller("contactController", contactController);
+angular.module("app").controller("addContactController", addContactController);
 
-function contactController($location, contactFactory){
+function addContactController($location, contactFactory){
   var self = this;
 
   self.firstName;
@@ -29,5 +29,4 @@ function contactController($location, contactFactory){
           console.log(returnedData);
       });
   }
-
 }

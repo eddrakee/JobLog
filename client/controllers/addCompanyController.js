@@ -1,6 +1,6 @@
-angular.module("app").controller("companyController", companyController);
+angular.module("app").controller("addCompanyController", addCompanyController);
 
-function companyController($location, companyFactory){
+function addCompanyController($location, companyFactory){
   var self = this;
 
   // self.companyName;

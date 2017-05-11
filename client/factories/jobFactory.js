@@ -3,6 +3,7 @@ app.factory('jobFactory', function($http){
     factory.questions = []
     factory.addJob = function(job){
         $http.post('/jobs/add',job).then(function(output){
+          console.log(output);
             factory.questions.push(output.data)
         })
     }
