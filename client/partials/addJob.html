@@ -7,7 +7,7 @@
             </div>
             <div class="form-group">
                 <label for="companyName">Company: </label>
-                <input type="text" class="form-control" id="companyName" aria-describedby="company" placeholder="Company Name" ng-model="addOneJob.company">
+                <input type="text" class="form-control" id="companyName" aria-describedby="company" placeholder="Company Name" ng-model="AJC.company">
             </div>
             <div class="form-group">
                 <label for="dateApplied">Date Applied: </label>
@@ -15,7 +15,7 @@
             </div>
             <div class="form-group">
                 <label for="contact">Contact: </label>
-                <input class="form-control" id="contact" placeholder="Peggy" ng-model="addOneJob.contact"></input>
+                <input class="form-control" id="contact" placeholder="Peggy" ng-model="AJC.contact"></input>
             </div>
             <div class="form-group">
                 <label for="foundJobThrough">Found Job Through:</label>
@@ -33,9 +33,6 @@
             <div class="form-group">
                     <label for="about">Notes</label>
                     <textarea class="form-control" id="jobNotes" rows="3" placeholder="Enter notes about the company" ng-model="AJC.jobNotes"></textarea>
-
-                </div>
-
             <input type="submit" value="ADD" ng-click="addJob()">
         </form>
     </div>
