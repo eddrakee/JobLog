@@ -1,42 +1,41 @@
-<div ng-controller="jobController">
-    <div class="container-fluid">
-        <form>
-            <div class="form-group">
-                <label for="positionName">Position/Role: </label>
-                <input type="text" class="form-control" id="jobName" aria-describedby="jobName" placeholder="Web Developer" ng-model="addOneJob.position">
-            </div>
-            <div class="form-group">
-                <label for="companyName">Company: </label>
-                <input type="text" class="form-control" id="companyName" aria-describedby="company" placeholder="Company Name" ng-model="addOneJob.company">
-            </div>
-            <div class="form-group">
-                <label for="dateApplied">Date Applied: </label>
-                <input type="date" class="form-control" id="dateApplied" aria-describedby="dateApplied" ng-model="addOneJob.dateApplied">
-            </div>
-            <div class="form-group">
-                <label for="contact">Contact: </label>
-                <input class="form-control" id="contact" placeholder="Peggy" ng-model="addOneJob.contact"></input>
-            </div>
-            <div class="form-group">
-                <label for="foundJobThrough">Found Job Through:</label>
-                <select name="foundThrough" id="foundThrough" ng-model="addOneJob.foundThrough">
-                    <option value="recruiter">Recruiter</option>
-                    <option value="event">Event</option>
-                    <option value="linkedIn">LinkedIn</option>
-                    <option value="indeed.com">Indeed.com</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="url">Job URL: </label>
-                <input type="text" class="form-control" id="url" aria-describedby="url" placeholder="Company Name" ng-model="addOneJob.url">
-            </div>
-            <div class="form-group">
-                    <label for="about">Notes</label>
-                    <textarea class="form-control" id="jobNotes" rows="3" placeholder="Enter notes about the company" ng-model="addOneJob.jobNotes"></textarea>
-
-                </div>
-
-            <input type="submit" value="ADD" ng-click="addJob()">
-        </form>
+<div class="container-fluid">
+<form>
+    <div class="form-group">
+        <label for="positionName">Position/Role: </label>
+        <input type="text" class="form-control" id="jobName" aria-describedby="jobName" placeholder="Web Developer" ng-model="JC.newJob.position">
     </div>
+    <div class="form-group">
+        <label for="companyName">Company: </label>
+        <input type="text" class="form-control" id="companyName" aria-describedby="company" placeholder="Company Name" ng-model="JC.newJob.company">
+    </div>
+    <div class="form-group">
+        <label for="dateApplied">Date Applied: </label>
+        <input type="date" class="form-control" id="dateApplied" aria-describedby="dateApplied" ng-model="JC.newJob.dateApplied">
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact: </label>
+        <input class="form-control" id="contact" placeholder="Peggy" ng-model="JC.newJob.contact"></input>
+    </div>
+    <div class="form-group">
+        <label for="foundJobThrough">Found Job Through:</label>
+        <select name="foundThrough" id="foundThrough" ng-model="JC.newJob.foundThrough">
+            <option value="recruiter">Recruiter</option>
+            <option value="event">Event</option>
+            <option value="linkedIn">LinkedIn</option>
+            <option value="indeed.com">Indeed.com</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="url">Job URL: </label>
+        <input type="text" class="form-control" id="url" aria-describedby="url" placeholder="Company Name" ng-model="JC.newJob.url">
+    </div>
+    <div class="form-group">
+            <label for="about">Notes</label>
+            <textarea class="form-control" id="jobNotes" rows="3" placeholder="Enter notes about the company" ng-model="JC.newJob.jobNotes"></textarea>
+
+        </div>
+
+    <input type="submit" value="ADD" ng-click="JC.addJob()" class="btn-primary" />
+    <a href="#!/jobs/all">View All Jobs</a>
+</form>
 </div>
