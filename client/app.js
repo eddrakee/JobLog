@@ -25,10 +25,23 @@ app.config(function($routeProvider){
   .when('/jobs/all', {
     templateUrl: 'partials/allJobs.html'
   })
+  .when('/jobs/add', {
+    templateUrl: 'partials/addJob.html'
+  })
   .when('/company/add', {
     templateUrl: 'partials/addCompany.html',
     controller: 'companyController',
     controllerAs: 'CC'
+  })
+  .when('/company/', {
+      templateUrl: 'partials/company.html',
+      controller: 'viewCompanyController',
+      controllerAs: 'VCC'
+  })
+  .when('/contact/add', {
+      templateUrl: 'partials/addContact.html',
+      controller: 'contactController',
+      controllerAs: 'CC'
   })
   .otherwise({
     redirectTo: '/'

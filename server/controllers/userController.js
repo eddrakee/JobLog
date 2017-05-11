@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-
 var User = mongoose.model('User');
 var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);

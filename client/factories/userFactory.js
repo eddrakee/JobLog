@@ -2,9 +2,9 @@ app.factory('userFactory', function($http, $window){
   var user = {};
   var error = {};
   return{
-    createUser : function(input, callback){
-      console.log('factory trying to create the user', input);
-      $http.post('/users', input).then(function(response){
+    createUser : function(newUser, callback){
+      console.log('factory trying to create the user', newUser);
+      $http.post('/users', newUser).then(function(response){
         console.log(response);
       })
     },
@@ -34,6 +34,7 @@ app.factory('userFactory', function($http, $window){
         console.log(response);
       })
     },
+
     checkLogin: function(callback){
       $http.get('/loggedin').then(function(response){
         console.log(response);
@@ -55,4 +56,5 @@ app.factory('userFactory', function($http, $window){
       })
     }
   }
+  return factory;
 })
