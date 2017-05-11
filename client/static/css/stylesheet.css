@@ -1,7 +1,149 @@
+.navbar-default {
+  background-color: #200d3b;
+  text-transform: uppercase;
+  font-size:larger;
+}
+.navbar-default .navbar-brand {
+  /*color: #b0e6f4;*/
+  color:#200d3b;
+  background-color: #e1dfe1;
+  font-size:larger;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #cb3ed4;
+}
+.navbar-default .navbar-text {
+  color: #b0e6f4;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #b0e6f4;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #cb3ed4;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #cb3ed4;
+  background-color: #e1dfe1;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #cb3ed4;
+  background-color: #e1dfe1;
+}
+.navbar-default .navbar-toggle {
+  border-color: #e1dfe1;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #e1dfe1;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #b0e6f4;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #b0e6f4;
+}
+.navbar-default .navbar-link {
+  color: #b0e6f4;
+}
+.navbar-default .navbar-link:hover {
+  color: #cb3ed4;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #b0e6f4;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #cb3ed4;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #cb3ed4;
+    background-color: #e1dfe1;
+  }
+}
+ /******************************************************
+	CUSTOM BTN VALUES
+******************************************************/
+
+.btn {
+	padding: 14px 24px;
+	border: 0 none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+	outline: 0 none;
+}
+
+/******************************************************
+	RAISED BUTTONS
+******************************************************/
+.btn-primary.raised {
+	box-shadow: 0 3px 0 0 #007299;
+}
+.btn-primary.raised:active, .btn-primary.raised.active {
+	background: #33a6cc;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+.btn-success.raised {
+	box-shadow: 0 3px 0 0 #008c52;
+}
+.btn-success.raised:active, .btn-success.raised.active {
+	background: #39bf87;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+.btn-info.raised {
+	box-shadow: 0 3px 0 0 #35a2b5;
+}
+.btn-info.raised:active, .btn-info.raised.active {
+	background: #5fd4e8;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+.btn-warning.raised {
+	box-shadow: 0 3px 0 0 #b87430;
+}
+.btn-warning.raised:active, .btn-warning.raised.active {
+	background: #eba259;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+.btn-danger.raised {
+	box-shadow: 0 3px 0 0 #bf4343;
+}
+.btn-danger.raised:active, .btn-danger.raised.active {
+	background: #f26d6d;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
+}
+/*.btn-primary.raised {
+	box-shadow: 0 3px 0 0 green;
+}
+ .btn-primary.raised {
+	box-shadow: 0 3px 0 0 navy;
+}
  .btn-primary:active, .btn-primary.active {
     background: #200D3B;
     box-shadow: none;
-}
+}*/
 
 /*.btn {
     padding: 14px 24px;

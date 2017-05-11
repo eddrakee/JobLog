@@ -16,11 +16,13 @@
     <script src="./factories/userFactory.js"></script>
     <script src="./factories/companyFactory.js"></script>
     <script src="./factories/contactFactory.js"></script>
+    <script src="./factories/jobFactory.js"></script>
     <!-- Controllers -->
     <script src="./controllers/userController.js"></script>
     <script src="./controllers/companyController.js"></script>
     <script src="./controllers/viewCompanyController.js"></script>
     <script src="./controllers/contactController.js"></script>
+    <script src="./controllers/jobController.js"></script>
 
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
     <link href="/static/css/stylesheet.css" rel="stylesheet">
@@ -36,6 +38,20 @@
     </ul>
 </div>
 <body ng-app='app'>
+     <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">JobLog</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li ><a href="/">Dashboard</a></li>
+                <li><a href="#!/jobs/add">Add Job</a></li>
+                <li><a href="#!/company/add">Add Company</a></li>
+                <li><a href="#">Add Contact</a></li>
+                 <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
     <div ng-view></div>
 </body>
 </html>

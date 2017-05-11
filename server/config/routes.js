@@ -33,7 +33,10 @@ module.exports = function(app){
 // Contact
     app.post('/contact/add', contact.add);
 
-
+// Job
+app.post('/jobs/add', function(req,res){
+  jobs.addJob(req,res)
+})
 // Do we want to keep this here? - ED
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
