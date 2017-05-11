@@ -30,12 +30,12 @@ function companyController(){
     });
   }
 
-  self.findCompany = function(req, res) {
+  self.getOne = function(req, res) {
     res.json(findCompany(req.body.company));
   }
 
   // need to always give the user id of the person making the request from the client
-  self.post = function(req, res){
+  self.addOne = function(req, res){
     // first we will find the user
     let user = findUser(req.body.user);
     if(!user) res.json({success: false, error: "User not found..."});
@@ -50,9 +50,8 @@ function companyController(){
       }
       // If there isn't already a company, we will create one.
       else{
-        const tempCompany = req.body.company;
         tempCompany._user = user;
-        const tempCompany = new Company(tempCompany);
+        const tempCompany = new Company(req.body.company);
         // Saving the company
         tempCompany.save((err, newCompany)=>{
           if(err) res.json(err);
@@ -65,7 +64,7 @@ function companyController(){
               else{
                 res.json({succes: true, newCompany});
               }
-            }
+            });
           }
         });
       }
