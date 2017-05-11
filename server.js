@@ -14,15 +14,16 @@ var port         = 8000;
 // PASSPORT
 // require('./server/config/passport.js')(passport);
 
-
-
 app.use(express.static(path.join(__dirname,'/client')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(bodyParser.json());
-app.use(session({ secret: 'Joblog secret', name: 'Joblog' }));
+app.use(session({ secret: process.env.SESSION_SECRET || 'joblog',
+                          resave: false,
+                          saveUninitialized: false}));
 app.use(passport.initialize());
 app.use(passport.session());
 
+require("./server/config/mongoose.js");
 require('./server/config/routes.js')(app);
 
 app.listen(port, function(){

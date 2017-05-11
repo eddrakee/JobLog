@@ -8,8 +8,8 @@ const ContactSchema = new Schema({
   lastName: {type: String, minlength: 2},
   recruiter: {type: Boolean},
   favorite: {type: Boolean},
-  company: {type: mongoose.Schema.Types.ObjectID, ref: "Company"},
-  jobs: [{type: mongoose.Schema.Types.ObjectID, ref: "Job"}],
+  company: {type: mongoose.Schema.Types.ObjectId, ref: "Company"},
+  jobs: [{type: mongoose.Schema.Types.ObjectId, ref: "Job"}],
   email: {type: String, required: true, unique: true},
   phone: {type: Number},
   notes: {type: String}
