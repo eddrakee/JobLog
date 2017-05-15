@@ -8,9 +8,6 @@ app.config(function($routeProvider){
   $routeProvider
    //ADD ROUTES HERE
 
-  .when('/', {
-    templateUrl: 'partials/login.html'
-  })
   .when('/login', {
     templateUrl: 'partials/login.html',
     controller: 'userController',
@@ -59,6 +56,6 @@ app.config(function($routeProvider){
       controllerAs: 'CC'
   })
   .otherwise({
-    redirectTo: '/'
+    redirectTo: '/login'
   })
 })
