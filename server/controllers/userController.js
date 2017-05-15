@@ -8,17 +8,24 @@ function userController(){
 
   self.login = function(req, res){
     // find if the username exists in the db
-    User.findOne({name: req.body.user.userName}, function(err, user){
+    User.findOne({userName: req.body.userName}, function(err, user){
       if(err) res.json(err)
       // If we are returned a user, check if they have already logged in
       else if(user){
+        if(req.body.password == user.password);
         login(user, res);
       }
       // If we aren't returned a user, we must create one in the DB and log them in.
       else{
-        createUser(req.body.name, res);
+        // createUser(req.body.userName, res);
+        res.json({succes: false, error: "Login error"});
       }
     });
+  }
+
+  self.create = function(req, res){
+      console.log(req.body);
+      createUser(req.body, res);
   }
 
   function createUser(props, res){
@@ -36,7 +43,7 @@ function userController(){
   function login(user, res){
     if(self.users.includes(user.userName)){
       console.log("found user, already logged in!");
-      res.json({message: "User Already Logged In", kind: "Login Error"});
+      res.json({success: false, errmsg: "User Already Logged In", kind: "Login Error"});
     }
     else{
       self.users.push(user.userName);
@@ -45,6 +52,8 @@ function userController(){
     }
   }
 }
+
+module.exports = new userController();
 
 // DO NOT DELETE
 // King's Section - Pending

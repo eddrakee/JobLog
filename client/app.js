@@ -8,18 +8,26 @@ app.config(function($routeProvider){
   $routeProvider
    //ADD ROUTES HERE
 
-  .when('/', {
-    templateUrl: 'partials/dashboard.html'
-  })
   .when('/login', {
-    templateUrl: 'partials/login.html'
+    templateUrl: 'partials/login.html',
+    controller: 'userController',
+    controllerAs: 'UC'
   })
-  .when('/signup', {
-    templateUrl: 'partials/signup.html'
+  .when('/dashboard', {
+      templateUrl: 'partials/dashboard.html',
+      controller: 'dashboardController',
+      controllerAs: 'DC'
+  })
+  .when('/register', {
+    templateUrl: 'partials/register.html',
+    controller: 'userController',
+    controllerAs: 'UC'
   })
   // Load Profile Page
-  .when('/profile', {
-    templateUrl: 'partials/profile.html'
+  .when('/user/view', {
+    templateUrl: 'partials/viewUser.html',
+    controller: 'userController',
+    controllerAs: 'UC'
   })
   // Load View All Jobs page
   .when('/jobs/all', {
@@ -29,25 +37,25 @@ app.config(function($routeProvider){
   })
   .when('/jobs/add', {
     templateUrl: 'partials/addJob.html',
-    controller: 'jobController',
-    controllerAs: 'JC'
+    controller: 'addJobController',
+    controllerAs: "AJC"
   })
   .when('/company/add', {
     templateUrl: 'partials/addCompany.html',
-    controller: 'companyController',
-    controllerAs: 'CC'
+    controller: 'addCompanyController',
+    controllerAs: 'ACC'
   })
   .when('/company/', {
       templateUrl: 'partials/company.html',
-      controller: 'viewCompanyController',
-      controllerAs: 'VCC'
+      controller: 'companyController',
+      controllerAs: 'CC'
   })
   .when('/contact/add', {
       templateUrl: 'partials/addContact.html',
-      controller: 'contactController',
+      controller: 'addContactController',
       controllerAs: 'CC'
   })
   .otherwise({
-    redirectTo: '/'
+    redirectTo: '/login'
   })
 })
