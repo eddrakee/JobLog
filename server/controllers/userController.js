@@ -21,6 +21,11 @@ function userController(){
     });
   }
 
+  self.create = function(req, res){
+      console.log(req.body);
+      createUser(req.body, res);
+  }
+
   function createUser(props, res){
     const tempUser = new User(props);
     tempUser.save(function(err, newUser){
@@ -45,6 +50,8 @@ function userController(){
     }
   }
 }
+
+module.exports = new userController();
 
 // DO NOT DELETE
 // King's Section - Pending

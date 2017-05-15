@@ -7,10 +7,8 @@ var company = require("../controllers/companyController.js");
 module.exports = function(app){
 
 //User
-  app.post('/users',function(req,res) {
-		users.create(req,res);
-	});
-
+  app.post('/registration', users.create);
+  app.post('/login', users.login)
   // app.post('/login', passport.authenticate('local-login', {
   //   successRedirect: '/profile',
   //   failureRedirect: '/login',
@@ -22,7 +20,6 @@ module.exports = function(app){
   //     failureRedirect: '/signup',
   //     failureFlash: true
   // }));
-
   app.get('/profile', isLoggedIn, function(req, res) {
     res.render('profile');
   });

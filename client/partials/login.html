@@ -1,35 +1,35 @@
-<div ng-controller='userController'>
-  <div style="width: 100%; margin: 50px 50px 50px 50px; font-family: Arial, sans-serif">
-    <div style="width: 50%">
-      <h3>Login</h3>
-      <form ng-submit='loginUser(userData)'>
-        <!--<input style="width: 100%; margin-bottom: 15px" type="text" name='firstName' placeholder="Enter First Name" ng-model='newUser.firstName'>-->
-        <!--<input style="width: 100%; margin-bottom: 15px"type="text" name='lastName' placeholder="Enter Last Name" ng-model='newUser.lastName'>-->
-        <h5 style="margin: 5px 0px 5px 0px;">Username:</h5>
-        <input style="width: 100%; margin-bottom: 5px; padding: 5px;" type="text" name='userName' placeholder="Enter Username" ng-model='userData.userName'>
-        <!--<input style="width: 100%; margin-bottom: 15px" type="email" name='email' placeholder="Enter Email" ng-model='newUser.email'>-->
-        <h5 style="margin: 5px 0px 5px 0px;">Password</h5>
-        <input style="width: 100%; margin-bottom: 5px; padding: 5px;" type="password" name='password' placeholder="Create Password" ng-model='userData.password'>
-        <!--<input style="width: 100%; margin-bottom: 15px" type="password" name='password' placeholder="Confirm Password" ng-model='newUser.password'>-->
-        <input style="margin: 15px 0px 5px 0px;" type="submit" value="Submit"><br>
-        <h4>Can't Login?  <a href="register.html">Register!</a></h4>
-        <!--href="#!/login"-->
-      </form>
+<div>
+    <div style="width: 100%; margin: 50px 50px 50px 50px; font-family: Arial, sans-serif">
+        <div style="width: 50%">
+            <h3>Login</h3>
+            <form ng-submit='UC.login()'>
+                <!--<input style="width: 100%; margin-bottom: 15px" type="text" name='firstName' placeholder="Enter First Name" ng-model='newUser.firstName'>-->
+                <!--<input style="width: 100%; margin-bottom: 15px"type="text" name='lastName' placeholder="Enter Last Name" ng-model='newUser.lastName'>-->
+                <h5 style="margin: 5px 0px 5px 0px;">Username: </h5>
+                <input style="width: 100%; margin-bottom: 5px; padding: 5px;" type="text" name='userName' placeholder="Enter Username" ng-model='UC.userName'>
+                <!--<input style="width: 100%; margin-bottom: 15px" type="email" name='email' placeholder="Enter Email" ng-model='newUser.email'>-->
+                <h5 style="margin: 5px 0px 5px 0px;">Password: </h5>
+                <input style="width: 100%; margin-bottom: 5px; padding: 5px;" type="password" name='password' placeholder="Create Password" ng-model='UC.password'>
+                <!--<input style="width: 100%; margin-bottom: 15px" type="password" name='password' placeholder="Confirm Password" ng-model='newUser.password'>-->
+                <input style="margin: 15px 0px 5px 0px;" type="submit" value="Submit"><br>
+                <!--href="#!/login"-->
+            </form>
+            <h4>Can't Login? <a href="#!/register">Register!</a></h4>
+        </div>
     </div>
-  </div>
 </div>
 
 
 <!--<div ng-controller='userController'>
-  <h3>Login</h3>
-  <form ng-submit='loginUser(userData)'>
-    <div ng-if='error.message'><span ng-bind='error.message'></span></div>
-    <input type="text" name='email' placeholder="Enter Email" ng-model='userData.email'>
-    <input type="password" name='password' placeholder="Enter Password" ng-model='userData.password'>
-    <input type="submit" value="Submit">
-    <a href="#!/signup">Signup</a>
-  </form>
-  Login with
-  <a href="/auth/linkedin">Linkedin</a>
-  <a href="/auth/github">Github</a>
+<h3>Login</h3>
+<form ng-submit='loginUser(userData)'>
+<div ng-if='error.message'><span ng-bind='error.message'></span></div>
+<input type="text" name='email' placeholder="Enter Email" ng-model='userData.email'>
+<input type="password" name='password' placeholder="Enter Password" ng-model='userData.password'>
+<input type="submit" value="Submit">
+<a href="#!/signup">Signup</a>
+</form>
+Login with
+<a href="/auth/linkedin">Linkedin</a>
+<a href="/auth/github">Github</a>
 </div>-->

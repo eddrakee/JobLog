@@ -9,12 +9,17 @@ app.config(function($routeProvider){
    //ADD ROUTES HERE
 
   .when('/', {
-    templateUrl: 'partials/dashboard.html'
+    templateUrl: 'partials/login.html'
   })
   .when('/login', {
     templateUrl: 'partials/login.html',
     controller: 'userController',
     controllerAs: 'UC'
+  })
+  .when('/dashboard', {
+      templateUrl: 'partials/dashboard.html',
+      controller: 'dashboardController',
+      controllerAs: 'DC'
   })
   .when('/register', {
     templateUrl: 'partials/register.html',
