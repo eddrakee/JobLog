@@ -8,7 +8,6 @@ function addCompanyController($location, companyFactory){
   // self.companyPhone;
 
   self.addCompany = () => {
-    console.log("CALLING ADD COMPANY");
     companyFactory.submit(self.companyName, self.companyAdd, self.companyPhone, function(returnedData){
       console.log(returnedData);
     });

@@ -1,8 +1,9 @@
 angular.module("app").factory("companyFactory", companyFactory);
 
-function companyFactory($http){
+function companyFactory($http, userFactory){
   var factory = {};
   var db = {};
+  let user;
 
   factory.submit = (companyName, location, phone, cb) => {
     let company = {
@@ -11,9 +12,11 @@ function companyFactory($http){
       phone: phone
     }
 
-    console.log(company);
+    userFactory.getUser((returnedUser)=>{
+      user = returnedUser;
+    });
 // Need to add the company to the DB here
-    $http.post("/company/add", company).then(function(returnedData){
+    $http.post("/company/add", {company, user}).then(function(returnedData){
       if(returnedData.data.success){
         cb(returnedData.data);
       }

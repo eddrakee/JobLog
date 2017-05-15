@@ -8,10 +8,10 @@ function companyController(){
   var self = this;
 // we will always give find user the userid from the request
   findUser = (user) => {
-    User.findOne(user, function(err, user){
+    User.findOne({'_id': user._id}, function(err, foundUser){
       if(err) return false;
       else{
-        return user;
+        return foundUser;
       }
     });
   }
@@ -37,7 +37,9 @@ function companyController(){
   // need to always give the user id of the person making the request from the client
   self.addOne = function(req, res){
     // first we will find the user
-    let user = findUser(req.body.user);
+    var user = findUser(req.body.user);
+    // USER IS NOT BEING RETURNED BEFORE WE JUMP INTO THE COMPANY FIND ONE - NEED TO CHANGE TO PROMISE PATTERN
+    console.log(user);
     if(!user) res.json({success: false, error: "User not found..."});
     // then we will see if the company already exists
     Company.findOne({name: req.body.company.companyName}, function(err, company){
@@ -50,8 +52,8 @@ function companyController(){
       }
       // If there isn't already a company, we will create one.
       else{
-        tempCompany._user = user;
         const tempCompany = new Company(req.body.company);
+        tempCompany._user = user;
         // Saving the company
         tempCompany.save((err, newCompany)=>{
           if(err) res.json(err);
@@ -69,7 +71,6 @@ function companyController(){
         });
       }
     });
-    console.log(req.body);
   }
 
   // Updating a company
