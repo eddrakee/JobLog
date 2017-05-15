@@ -1,6 +1,6 @@
 angular.module("app").controller("userController", userController);
 
-function userController($location, $scope, userFactory){
+function userController($location, $scope, $timeout, userFactory){
     let self = this;
     self.flag = false;
     self.message = "";
@@ -26,11 +26,7 @@ function userController($location, $scope, userFactory){
                 }
                 else{
                     self.message = `${returnedData.data.user.userName} account created, logging in...`;
-                    setTimeout(()=>{
-                        $scope.$apply(()=>{
-                            $location.path('/dashboard');
-                        });
-                    }, 2000);
+                    $timeout(() => { $location.path('/dashboard')}, 2000);
                 }
             });
         }
@@ -40,21 +36,23 @@ function userController($location, $scope, userFactory){
         }
     }
     self.login = () => {
-        console.log("calling login");
         let user = {
-            userName: UC.userName,
-            password: UC.password
+            userName: self.userName,
+            password: self.password
         }
         userFactory.login(user, (returnedData) => {
-            console.log(returnedData);
+            if(!returnedData.data.success){
+              self.flag = true;
+              self.message = returnedData.data.errmsg;
+            }
+            else{
+              self.flag = true;
+              self.message = `${returnedData.data.user.userName} logged in, rerouting shortly`;
+              $timeout(() => { $location.path('/dashboard')}, 2000);
+            }
         });
     }
 }
-
-
-
-
-
 
 // King's Login Registration - DO NOT DELETE
 // app.controller('userController', function($scope, $location, $http, userFactory){

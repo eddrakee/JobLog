@@ -2,30 +2,40 @@ angular.module("app").factory("userFactory", userFactory);
 
 function userFactory($http){
     let factory = {};
-    let user = {};
+    factory.user = {};
 
-    factory.loginUser = function(user, cb){
+    factory.login = function(user, cb){
         console.log(`logging in with ${user}`);
         $http.post('/login', user).then((returnedData) =>{
             console.log(returnedData);
-            if(returnedData.data.err){
-                console.log(returnedData.data.err);
-                cb(returnedData.data.err);
+            if(!returnedData.data.success){
+                cb(returnedData);
             }
             else{
-                user = returnedData.data.data;
-                cb(user)
+                factory.user = returnedData.data.user;
+                console.log(factory.user);
+                cb(returnedData);
             }
-        })
+        });
     }
 
     factory.register = function(newUser, cb){
         console.log('creating new user');
         $http.post('/registration', newUser).then((returnedData) => {
+          if(!returnedData.data.succes){
             cb(returnedData);
+          }
+          else{
+            factory.user = returnedData.data.user;
+            cb(returnedData);
+          }
         });
+
     }
 
+    factory.getUser = (cb) => {
+        cb(factory.user);
+    }
 
 return factory;
 
